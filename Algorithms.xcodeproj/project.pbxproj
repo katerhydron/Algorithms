@@ -13,6 +13,7 @@
 		1EFA92EF215229A400ABA26E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EFA92ED215229A400ABA26E /* Main.storyboard */; };
 		1EFA92F2215229A400ABA26E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA92F1215229A400ABA26E /* main.m */; };
 		1EFA92FD215229A500ABA26E /* AlgorithmsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA92FC215229A500ABA26E /* AlgorithmsTests.m */; };
+		1EFA930921522A8400ABA26E /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA930821522A8400ABA26E /* BinarySearch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,8 @@
 		1EFA92F8215229A500ABA26E /* AlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EFA92FC215229A500ABA26E /* AlgorithmsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsTests.m; sourceTree = "<group>"; };
 		1EFA92FE215229A500ABA26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EFA930721522A8400ABA26E /* BinarySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearch.h; sourceTree = "<group>"; };
+		1EFA930821522A8400ABA26E /* BinarySearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinarySearch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +83,9 @@
 		1EFA92E4215229A400ABA26E /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
-				1EFA92E5215229A400ABA26E /* AppDelegate.h */,
-				1EFA92E6215229A400ABA26E /* AppDelegate.m */,
-				1EFA92E8215229A400ABA26E /* ViewController.h */,
-				1EFA92E9215229A400ABA26E /* ViewController.m */,
-				1EFA92EB215229A400ABA26E /* Assets.xcassets */,
-				1EFA92ED215229A400ABA26E /* Main.storyboard */,
-				1EFA92F0215229A400ABA26E /* Info.plist */,
-				1EFA92F1215229A400ABA26E /* main.m */,
-				1EFA92F3215229A400ABA26E /* Algorithms.entitlements */,
+				1EFA930A21522A9700ABA26E /* SupportingFiles */,
+				1EFA930721522A8400ABA26E /* BinarySearch.h */,
+				1EFA930821522A8400ABA26E /* BinarySearch.m */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -100,6 +97,22 @@
 				1EFA92FE215229A500ABA26E /* Info.plist */,
 			);
 			path = AlgorithmsTests;
+			sourceTree = "<group>";
+		};
+		1EFA930A21522A9700ABA26E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1EFA92E5215229A400ABA26E /* AppDelegate.h */,
+				1EFA92E6215229A400ABA26E /* AppDelegate.m */,
+				1EFA92E8215229A400ABA26E /* ViewController.h */,
+				1EFA92E9215229A400ABA26E /* ViewController.m */,
+				1EFA92EB215229A400ABA26E /* Assets.xcassets */,
+				1EFA92ED215229A400ABA26E /* Main.storyboard */,
+				1EFA92F0215229A400ABA26E /* Info.plist */,
+				1EFA92F1215229A400ABA26E /* main.m */,
+				1EFA92F3215229A400ABA26E /* Algorithms.entitlements */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFA930921522A8400ABA26E /* BinarySearch.m in Sources */,
 				1EFA92EA215229A400ABA26E /* ViewController.m in Sources */,
 				1EFA92F2215229A400ABA26E /* main.m in Sources */,
 				1EFA92E7215229A400ABA26E /* AppDelegate.m in Sources */,
@@ -350,11 +364,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Algorithms/SupportingFiles/Algorithms.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3E4BQMHR3R;
-				INFOPLIST_FILE = Algorithms/Info.plist;
+				INFOPLIST_FILE = Algorithms/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -368,11 +382,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Algorithms/SupportingFiles/Algorithms.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3E4BQMHR3R;
-				INFOPLIST_FILE = Algorithms/Info.plist;
+				INFOPLIST_FILE = Algorithms/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

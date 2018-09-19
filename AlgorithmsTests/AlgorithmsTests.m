@@ -8,7 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
+#import "BinarySearch.h"
+
 @interface AlgorithmsTests : XCTestCase
+
+@property (strong, nonatomic) BinarySearch *binarySearch;
 
 @end
 
@@ -16,17 +20,30 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.binarySearch = [BinarySearch new];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    self.binarySearch = nil;
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testSimpleSearch {
+    NSArray *sortedArray = @[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10];
+    NSUInteger result = [self.binarySearch searchFor:5 inArray:sortedArray];
+    NSAssert(result == 4, @"Wrong search result: %lu", result);
+}
+
+- (void)testBoundarySearchMin {
+    NSArray *sortedArray = @[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10];
+    NSUInteger result = [self.binarySearch searchFor:1 inArray:sortedArray];
+    NSAssert(result == 0, @"Wrong search result: %lu", result);
+}
+
+- (void)testBoundarySearchMax {
+    NSArray *sortedArray = @[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10];
+    NSUInteger result = [self.binarySearch searchFor:10 inArray:sortedArray];
+    NSAssert(result == 9, @"Wrong search result: %lu", result);
 }
 
 - (void)testPerformanceExample {
