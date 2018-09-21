@@ -20,10 +20,13 @@
         if (pickedValue == number) {
             return middleIndex;
         }
+        if (middleIndex == (array.count - 1) || middleIndex == 0) {
+            return -1;
+        }
         if (number < pickedValue) {
             middleIndex = middleIndex / 2;
         } else if (number > pickedValue) {
-            middleIndex = middleIndex + ((array.count - 1) - middleIndex) / 2;
+            middleIndex = middleIndex + (array.count - middleIndex) / 2;
         }
     }
     return -1;

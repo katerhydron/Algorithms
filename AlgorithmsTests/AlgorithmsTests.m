@@ -46,6 +46,24 @@
     NSAssert(result == 9, @"Wrong search result: %lu", result);
 }
 
+- (void)testSearchNotFoundMin {
+    NSArray *sortedArray = @[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10];
+    NSUInteger result = [self.binarySearch searchFor:0 inArray:sortedArray];
+    NSAssert(result == -1, @"Wrong search result: %lu", result);
+}
+
+- (void)testSearchNotFoundMax {
+    NSArray *sortedArray = @[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10];
+    NSUInteger result = [self.binarySearch searchFor:11 inArray:sortedArray];
+    NSAssert(result == -1, @"Wrong search result: %lu", result);
+}
+
+- (void)disabled_testUnsorted {
+    NSArray *sortedArray = @[@0,@14,@2,@9,@12,@4,@75,@5,@0,@11];
+    NSUInteger result = [self.binarySearch searchFor:11 inArray:sortedArray];
+    NSAssert(result == -1, @"Wrong search result: %lu", result);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
